@@ -1,0 +1,483 @@
+{
+  "info": {
+    "_postman_id": "949f3f40-f737-4b71-879d-17d78d5671ab",
+    "name": "cloud api",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "52234919",
+    "_collection_link": "https://go.postman.co/collection/52234919-949f3f40-f737-4b71-879d-17d78d5671ab?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "POST /Import",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1NTc1ODgzLCJleHAiOjE3NzU2NjIyODN9.hMPhNAxFgGATDXnxJrzR1f47sTJdFuuUEKgdDQ-M2QdcQb9YWn08GJv-k0s16Frj",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "files",
+              "description": "prueba",
+              "type": "file",
+              "uuid": "466e4171-ba26-4fd1-96f5-403b0d2ea051",
+              "value": null
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/import",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "import"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /register",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"roberto\",\r\n    \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/register",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "register"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /Login",
+      "request": {
+        "auth": {
+          "type": "noauth"
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"username\": \"roberto\",\r\n    \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/auth/login",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "auth",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Billing/all",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/billing/all",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "billing",
+            "all"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Billing?page&size",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/billing?page=1&size=50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "billing"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "size",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Billing/id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/billing/10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "billing",
+            "10"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Audit/All",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/audit",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "audit"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Audit?page&size",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/audit?page=1&size=50",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "audit"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "1"
+            },
+            {
+              "key": "size",
+              "value": "50"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "GET /Audit/id",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/audit/36000",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "audit",
+            "36000"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /billing/search",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n    \"cloud\": \"gcp\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/billing/search?page=0&size=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "billing",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "POST /audit/search",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MDUyMjAwLCJleHAiOjE3NzUxMzg2MDB9.x3Lbds_w6IV_LFtOic0eH9PWbecxnnNwRQHdTeC3DgrCK5icwhCYHIslexBCkW6c",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"region\": \"eu-west-1\"\r\n  \r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://localhost:8080/api/audit/search?page=0&size=10",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "audit",
+            "search"
+          ],
+          "query": [
+            {
+              "key": "page",
+              "value": "0"
+            },
+            {
+              "key": "size",
+              "value": "10"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /billing/hash",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MTMzODAxLCJleHAiOjE3NzUyMjAyMDF9.HW9Svi6q0zbbRC6QHDQeqHpg1QOuzm7j1w4YSCEKLowFrxwT4GuHwQ-9Jyjugpze",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/billing/hash/c4480ff5f1e8938380665be94526a72f8ec246e4d06dee456c9468ea0825240e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "billing",
+            "hash",
+            "c4480ff5f1e8938380665be94526a72f8ec246e4d06dee456c9468ea0825240e"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DELETE /audit/hash",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJyb2JlcnRvIiwiaWF0IjoxNzc1MTMzODAxLCJleHAiOjE3NzUyMjAyMDF9.HW9Svi6q0zbbRC6QHDQeqHpg1QOuzm7j1w4YSCEKLowFrxwT4GuHwQ-9Jyjugpze",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:8080/api/audit/hash/c4480ff5f1e8938380665be94526a72f8ec246e4d06dee456c9468ea0825240e",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "api",
+            "audit",
+            "hash",
+            "c4480ff5f1e8938380665be94526a72f8ec246e4d06dee456c9468ea0825240e"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
